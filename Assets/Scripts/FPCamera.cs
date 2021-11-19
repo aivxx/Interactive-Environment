@@ -16,6 +16,12 @@ public class FPCamera : MonoBehaviour
     public float xRot; //rotation x in degrees
     public float yRot; //rotation y in degrees
 
+
+  
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +32,7 @@ public class FPCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
 
         //Keep track of the player's x and y rotation
         yRot += deltaX;
