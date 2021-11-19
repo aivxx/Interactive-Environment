@@ -11,20 +11,29 @@ public class FPMove : MonoBehaviour
 
     public Rigidbody rb; // The player's rigidbody
 
+
     // Start is called before the first frame update
     void Start()
     {
+      
+        Cursor.visible = false; //hide cursor
         rb = gameObject.GetComponent<Rigidbody>();
     }
 
     // All physics calculations happen in FixedUpdate
     void FixedUpdate()
     {
+
+       
+
+       
         // transform.Translate(direction * speed * Time.deltaTime);
         // make world direction into local direction
         Vector3 localDirection = transform.TransformDirection(direction);
         // move using physics
         rb.MovePosition(rb.position + (localDirection * speed * Time.deltaTime));
+
+      
     }
 
     // OnPlayerMove event handler
