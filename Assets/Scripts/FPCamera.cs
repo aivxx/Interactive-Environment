@@ -33,6 +33,7 @@ public class FPCamera : MonoBehaviour
     void Update()
     {
 
+ if (PauseMenu.GamePaused) return;
 
         //Keep track of the player's x and y rotation
         yRot += deltaX;
@@ -45,7 +46,7 @@ public class FPCamera : MonoBehaviour
         playerCamera.transform.localRotation = Quaternion.Euler(xRot, 0, 0);
         transform.rotation = Quaternion.Euler(0, yRot, 0);
 
-        if (PauseMenu.GamePaused) return;
+       
     }
 
     // OnCameraLook event handler

@@ -312,4 +312,7 @@ public class @FPMovement : IInputActionCollection, IDisposable
         void OnPlayerMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
     }
+
+
+    
 }
