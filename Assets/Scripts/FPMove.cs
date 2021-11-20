@@ -5,9 +5,22 @@ using UnityEngine.InputSystem;
 
 public class FPMove : MonoBehaviour
 {
+    public CharacterController controller;
+
     // Player's movement parameters
     public Vector3 direction; // The player's direction at any given time
     public float speed; // The player's speed at any given time
+    public float gravity = -9.81f;
+    public float jumpHeight = 3;
+    Vector3 velocity;
+    bool isGrounded;
+
+    public Transform groundCheck;
+    public float groundDistance = 0.4f;
+    public LayerMask groundMask;
+
+    float turnSmoothVelocity;
+    public float turnSmoothTime = 0.1f;
 
     public Rigidbody rb; // The player's rigidbody
 
@@ -15,7 +28,25 @@ public class FPMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+        // Check if grounded
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+        // Jumping
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
+
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
+
+        // Gravity
+        velocity.y += gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
+
+
         Cursor.visible = false; //hide cursor
         rb = gameObject.GetComponent<Rigidbody>();
     }
@@ -23,9 +54,6 @@ public class FPMove : MonoBehaviour
     // All physics calculations happen in FixedUpdate
     void FixedUpdate()
     {
-
-       
-
        
         // transform.Translate(direction * speed * Time.deltaTime);
         // make world direction into local direction
