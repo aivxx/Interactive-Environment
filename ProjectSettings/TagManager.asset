@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fall Zone
   - Clues
+  - Secret Tree
   layers:
   - Default
   - TransparentFX
