@@ -9,6 +9,7 @@ public class ClueUI : MonoBehaviour
 {
     
     public GameObject uiObject;
+    public AudioSource playSound;
    
 
     // Start is called before the first frame update
@@ -22,6 +23,7 @@ public class ClueUI : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             uiObject.SetActive(true);
+            playSound.Play();
             
         }
     }
