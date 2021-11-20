@@ -52,7 +52,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         AudioListener.pause = false;
         GamePaused = false;
-        
+        Cursor.visible = false;
         PauseMenuUI.SetActive(false);
         
     }
@@ -62,7 +62,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         AudioListener.pause = true;
         GamePaused = true;
-        
+        Cursor.visible = true;
         PauseMenuUI.SetActive(true);
         
     }

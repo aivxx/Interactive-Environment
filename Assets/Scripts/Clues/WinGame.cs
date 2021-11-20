@@ -19,6 +19,7 @@ public class WinGame : MonoBehaviour
         {
             uiMenu.SetActive(true);
             playSound.Play();
+            Cursor.visible = true;
         }
     }
 
