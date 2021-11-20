@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1014698613071192990}
   - component: {fileID: 3300708203064119824}
+  - component: {fileID: 407115107}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -93,6 +94,25 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!95 &407115107
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3190348417101830238}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d41954b2e8f9ffb49b1d05452607ff71, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8795775143613216607
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +125,8 @@ GameObject:
   - component: {fileID: 3635593619947297916}
   - component: {fileID: 8744650688388961063}
   - component: {fileID: 6764985970483738713}
-  - component: {fileID: 6195476878652183892}
+  - component: {fileID: 2033122656}
+  - component: {fileID: 4024990558840597220}
   m_Layer: 0
   m_Name: Clue
   m_TagString: Untagged
@@ -190,7 +211,26 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6195476878652183892
+--- !u!95 &2033122656
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8795775143613216607}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 157e31c8311393e4b9fdbe7517fca3df, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4024990558840597220
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,8 +239,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8795775143613216607}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffd8541f27d251d428ff556e70e424be, type: 3}
+  m_Script: {fileID: 11500000, guid: 2cda152d8c9a26b4884063ffe6f1c0e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationAxis: {x: 0, y: 1, z: 0}
-  rotationSpeed: 0.1
+  frequency: 1
+  amplitude: 0.5
