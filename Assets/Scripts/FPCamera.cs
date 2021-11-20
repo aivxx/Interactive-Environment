@@ -44,6 +44,8 @@ public class FPCamera : MonoBehaviour
         // rotate camera around x axis
         playerCamera.transform.localRotation = Quaternion.Euler(xRot, 0, 0);
         transform.rotation = Quaternion.Euler(0, yRot, 0);
+
+        if (PauseMenu.GamePaused) return;
     }
 
     // OnCameraLook event handler

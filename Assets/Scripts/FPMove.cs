@@ -61,6 +61,9 @@ public class FPMove : MonoBehaviour
         // move using physics
         rb.MovePosition(rb.position + (localDirection * speed * Time.deltaTime));
 
+        if (PauseMenu.GamePaused) return;
+
+
       
     }
 
