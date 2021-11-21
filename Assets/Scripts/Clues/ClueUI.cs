@@ -10,12 +10,16 @@ public class ClueUI : MonoBehaviour
     
     public GameObject uiObject;
     public AudioSource playSound;
-   
+
+
+ 
+
 
     // Start is called before the first frame update
     void Start()
     {
         uiObject.SetActive(false);
+       playSound.Pause();
     }
 
     private void OnTriggerEnter(Collider other)
