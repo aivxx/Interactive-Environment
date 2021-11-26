@@ -11,12 +11,15 @@ public class WinGame : MonoBehaviour
     void Start()
     {
         uiMenu.SetActive(false);
+        Time.timeScale = 1f;
+        Cursor.visible = false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {
+            Time.timeScale = 0f;
             uiMenu.SetActive(true);
             playSound.Play();
             Cursor.visible = true;
